@@ -45,3 +45,33 @@ def driver(config):
 
 
 
+# Hook para screenshots en fallos (UI)
+
+def pytest_configure(config):
+    global pytest_html
+    pytest_html = config.pluginmanager.getplugin('html')
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    """Captura screenshot en caso de fallo y lo añade al reporte HTML"""
+    outcome = yield
+    rep = outcome.get_result()
+
+    if rep.when == "call" and rep.failed:
+        driver = item.funcargs.get("driver")
+        if driver:
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            screenshot_name = f"{item.name}_{timestamp}.png"
+            screenshot_dir = os.path.join("reports", "screenshots")
+            os.makedirs(screenshot_dir, exist_ok=True)
+            screenshot_path = os.path.join(screenshot_dir, screenshot_name)
+            driver.save_screenshot(screenshot_path)
+            logger.error(f"Test falló, screenshot guardado en {screenshot_path}")
+
+            # Añadir imagen al reporte HTML
+            extra = getattr(rep, 'extra', [])
+            extra.append(pytest_html.extras.image(screenshot_path))
+            rep.extra = extra
+
+
+
