@@ -12,3 +12,4 @@ def test_add_product_to_cart(driver):
 
     cart = CartPage(driver)
     assert "Sauce Labs Backpack" in driver.page_source
+
