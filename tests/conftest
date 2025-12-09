@@ -11,7 +11,7 @@ logger = get_logger()
 
 
 
-# Fixtures de configuración
+# Fixture de configuración
 
 @pytest.fixture(scope="session")
 def config():
@@ -22,42 +22,26 @@ def config():
 
 
 
-
-
+# Fixture de WebDriver (UI)
 
 @pytest.fixture
 def driver(config):
-    driver = get_driver(config["browser"])
-    driver.get(config["base_url"])
-    driver.implicitly_wait(config["implicit_wait"])
+    browser = config.get("browser", "chrome").lower()
+    if browser == "chrome":
+        options = webdriver.ChromeOptions()
+        options.add_argument("--start-maximized")
+        driver = webdriver.Chrome(options=options)
+    elif browser == "firefox":
+        driver = webdriver.Firefox()
+        driver.maximize_window()
+    else:
+        raise ValueError(f"Browser {browser} no soportado")
+
+    driver.implicitly_wait(config.get("implicit_wait", 5))
+    logger.info(f"{browser.capitalize()} WebDriver iniciado")
     yield driver
     driver.quit()
-
-
-@pytest.hookimpl(hookwrapper=True)
-def pytest_runtest_makereport(item, call):
-    """Hook para tomar screenshots al fallar una prueba"""
-    outcome = yield
-    rep = outcome.get_result()
-    if rep.when == "call" and rep.failed:
-        driver = item.funcargs.get("driver")
-        if driver:
-            # Usar la funciÃ³n screenshot de BasePage
-            try:
-                from pages.base_page import BasePage
-                page = BasePage(driver)
-                name = item.name
-                screenshot_path = page.screenshot(name=name)
-                print(f"\n Screenshot guardado en: {screenshot_path}")
-            except Exception as e:
-                print(f"No se pudo tomar screenshot: {e}")
+    logger.info(f"{browser.capitalize()} WebDriver cerrado")
 
 
 
-
-
-@pytest.fixture
-def session():
-    """Crea una sesiÃ³n de requests para reutilizar conexiones"""
-    with requests.Session() as s:
-        yield s
