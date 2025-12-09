@@ -176,3 +176,4 @@ def pytest_runtest_setup(item):
 @pytest.hookimpl(tryfirst=True)
 def pytest_runtest_teardown(item, nextitem):
     logger.info(f"Finalizado test: {item.name}")
+
