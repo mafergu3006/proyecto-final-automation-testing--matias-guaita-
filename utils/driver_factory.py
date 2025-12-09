@@ -7,3 +7,4 @@ def get_driver(browser="chrome"):
         return webdriver.Chrome(options=options)
     else:
         raise ValueError("Browser not supported")
+
