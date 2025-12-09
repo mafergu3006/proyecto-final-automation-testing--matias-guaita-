@@ -1,0 +1,48 @@
+import pytest
+import requests
+import yaml
+from datetime import datetime
+from utils.driver_factory import get_driver
+import os
+
+@pytest.fixture(scope="session")
+def config():
+    with open("config/config.yaml") as f:
+        return yaml.safe_load(f)
+
+@pytest.fixture
+def driver(config):
+    driver = get_driver(config["browser"])
+    driver.get(config["base_url"])
+    driver.implicitly_wait(config["implicit_wait"])
+    yield driver
+    driver.quit()
+
+
+@pytest.hookimpl(hookwrapper=True)
+def pytest_runtest_makereport(item, call):
+    """Hook para tomar screenshots al fallar una prueba"""
+    outcome = yield
+    rep = outcome.get_result()
+    if rep.when == "call" and rep.failed:
+        driver = item.funcargs.get("driver")
+        if driver:
+            # Usar la funciÃ³n screenshot de BasePage
+            try:
+                from pages.base_page import BasePage
+                page = BasePage(driver)
+                name = item.name
+                screenshot_path = page.screenshot(name=name)
+                print(f"\n Screenshot guardado en: {screenshot_path}")
+            except Exception as e:
+                print(f"No se pudo tomar screenshot: {e}")
+
+
+
+
+
+@pytest.fixture
+def session():
+    """Crea una sesiÃ³n de requests para reutilizar conexiones"""
+    with requests.Session() as s:
+        yield s
