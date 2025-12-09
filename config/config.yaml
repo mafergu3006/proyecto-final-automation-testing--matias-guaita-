@@ -1,4 +1,4 @@
-base_url: "https://www.saucedemo.com"
+base_url_ui: "https://www.saucedemo.com"
+base_url_api: "https://reqres.in/api"
 browser: "chrome"
 implicit_wait: 5
-
