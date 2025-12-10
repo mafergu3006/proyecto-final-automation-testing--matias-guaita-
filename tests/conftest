@@ -75,3 +75,21 @@ def pytest_runtest_makereport(item, call):
 
 
 
+# Fixture de Requests (API)
+
+@pytest.fixture
+def session():
+    with requests.Session() as s:
+        yield s
+
+
+
+# Logging adicional por test
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_runtest_setup(item):
+    logger.info(f"Iniciando test: {item.name}")
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_runtest_teardown(item, nextitem):
+    logger.info(f"Finalizado test: {item.name}")
