@@ -17,19 +17,19 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Configurar Python
+      # Configuración de Python
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
-      # Instalar dependencias
+      # Instalación de dependencias
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install selenium pytest pytest-html pyyaml requests --user
 
-      # Instalar navegador y driver para Selenium
+      # Instalación de navegador y driver para Selenium
       - name: Setup Chrome
         uses: browser-actions/setup-chrome@v1
 
@@ -38,7 +38,7 @@ jobs:
         with:
           version: 'latest'
 
-      # Ejecutar tests y generar reportes HTML
+      # Ejecución de tests y generar reportes HTML
       - name: Run tests
         run: |
           mkdir -p reports/screenshots
@@ -64,3 +64,4 @@ jobs:
         with:
           name: logs
           path: reports/logs/
+
