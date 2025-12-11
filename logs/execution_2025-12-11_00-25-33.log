@@ -9,31 +9,31 @@
 2025-12-11 00:26:19 | INFO | Driver downloading response is 200
 2025-12-11 00:26:22 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:26:24 | INFO | Driver has been saved in cache [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42]
-2025-12-11 00:27:26 | ERROR | Test 'test_add_product_to_cart' fallÛ. Screenshot guardado: screenshots/test_add_product_to_cart_2025-12-11_00-27-21.png
+2025-12-11 00:27:26 | ERROR | Test 'test_add_product_to_cart' fall√≥. Screenshot guardado: screenshots/test_add_product_to_cart_2025-12-11_00-27-21.png
 2025-12-11 00:27:31 | INFO | ====== WebDriver manager ======
 2025-12-11 00:27:43 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:27:45 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:27:48 | INFO | Driver [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
-2025-12-11 00:28:03 | ERROR | Test 'test_checkout_flow[data0]' fallÛ. Screenshot guardado: screenshots/test_checkout_flow[data0]_2025-12-11_00-28-03.png
+2025-12-11 00:28:03 | ERROR | Test 'test_checkout_flow[data0]' fall√≥. Screenshot guardado: screenshots/test_checkout_flow[data0]_2025-12-11_00-28-03.png
 2025-12-11 00:28:06 | INFO | ====== WebDriver manager ======
 2025-12-11 00:28:09 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:28:10 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:28:12 | INFO | Driver [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
-2025-12-11 00:28:25 | ERROR | Test 'test_checkout_flow[data1]' fallÛ. Screenshot guardado: screenshots/test_checkout_flow[data1]_2025-12-11_00-28-24.png
+2025-12-11 00:28:25 | ERROR | Test 'test_checkout_flow[data1]' fall√≥. Screenshot guardado: screenshots/test_checkout_flow[data1]_2025-12-11_00-28-24.png
 2025-12-11 00:28:27 | INFO | ====== WebDriver manager ======
 2025-12-11 00:28:30 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:28:32 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:28:33 | INFO | Driver [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
-2025-12-11 00:28:45 | ERROR | Test 'test_login_invalid[user0]' fallÛ. Screenshot guardado: screenshots/test_login_invalid[user0]_2025-12-11_00-28-45.png
+2025-12-11 00:28:45 | ERROR | Test 'test_login_invalid[user0]' fall√≥. Screenshot guardado: screenshots/test_login_invalid[user0]_2025-12-11_00-28-45.png
 2025-12-11 00:28:49 | INFO | ====== WebDriver manager ======
 2025-12-11 00:28:52 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:28:53 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:28:55 | INFO | Driver [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
 2025-12-11 00:28:58 | INFO | Driver inicializado
-2025-12-11 00:28:58 | INFO | Abriendo p·gina de login
+2025-12-11 00:28:58 | INFO | Abriendo p√°gina de login
 2025-12-11 00:29:09 | INFO | Ingresando usuario: standard_user
 2025-12-11 00:29:09 | INFO | Escribiendo 'standard_user' en ('id', 'user-name')
-2025-12-11 00:29:22 | INFO | Ingresando contraseÒa
+2025-12-11 00:29:22 | INFO | Ingresando contrase√±a
 2025-12-11 00:29:22 | INFO | Escribiendo 'secret_sauce' en ('id', 'password')
 2025-12-11 00:29:22 | INFO | Haciendo clic en login
 2025-12-11 00:29:22 | INFO | Haciendo clic en ('id', 'login-button')
@@ -44,10 +44,10 @@
 2025-12-11 00:29:31 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:29:32 | INFO | Driver [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
 2025-12-11 00:29:38 | INFO | Driver inicializado
-2025-12-11 00:29:38 | INFO | Abriendo p·gina de login
+2025-12-11 00:29:38 | INFO | Abriendo p√°gina de login
 2025-12-11 00:29:45 | INFO | Ingresando usuario: locked_out_user
 2025-12-11 00:29:45 | INFO | Escribiendo 'locked_out_user' en ('id', 'user-name')
-2025-12-11 00:29:45 | INFO | Ingresando contraseÒa
+2025-12-11 00:29:45 | INFO | Ingresando contrase√±a
 2025-12-11 00:29:45 | INFO | Escribiendo 'secret_sauce' en ('id', 'password')
 2025-12-11 00:29:45 | INFO | Haciendo clic en login
 2025-12-11 00:29:45 | INFO | Haciendo clic en ('id', 'login-button')
@@ -59,4 +59,5 @@
 2025-12-11 00:29:51 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:29:52 | INFO | Get LATEST chromedriver version for google-chrome
 2025-12-11 00:29:54 | INFO | Driver [C:\Users\matia\.wdm\drivers\chromedriver\win64\143.0.7499.42\chromedriver-win32/chromedriver.exe] found in cache
-2025-12-11 00:30:05 | ERROR | Test 'test_navigation' fallÛ. Screenshot guardado: screenshots/test_navigation_2025-12-11_00-30-05.png
+2025-12-11 00:30:05 | ERROR | Test 'test_navigation' fall√≥. Screenshot guardado: screenshots/test_navigation_2025-12-11_00-30-05.png
+
