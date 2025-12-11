@@ -7,7 +7,7 @@
 ### El framework permite ejecutar pruebas automatizadas de UI y API, incluyendo reportes visuales HTML y screenshots de fallos.
 
 ## Tecnologías utilizadas
-### - Python
+#### - Python
 #### - Pytest
 #### - Selenium WebDriver
 #### - Requests
@@ -117,4 +117,4 @@
 #### - Duración de ejecución
 #### - Logs detallados de cada paso (pasos clave de UI o API)
 #### - Capturas de pantalla adjuntas automáticamente en tests fallidos
-#### - Los logs completos se encuentran en logs/, con fecha y hora de ejecución.
+#### - Los logs completos se encuentran en logs/, con fecha y hora de ejecución
