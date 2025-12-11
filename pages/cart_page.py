@@ -5,5 +5,5 @@ class CartPage(BasePage):
 
     CHECKOUT_BTN = (By.ID, "checkout")
 
-    def checkout(self):
+    def proceed_to_checkout(self):
         self.click(self.CHECKOUT_BTN)
