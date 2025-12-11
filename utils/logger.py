@@ -1,28 +1,20 @@
 import logging
 import os
+from datetime import datetime
 
-def get_logger(name="TestLogger"):
-    os.makedirs("reports/logs", exist_ok=True)
-    log_file = os.path.join("reports/logs", "execution.log")
 
-    logger = logging.getLogger(name)
-    logger.setLevel(logging.INFO)
+os.makedirs("logs", exist_ok=True)
 
-    if not logger.handlers:
-        # File handler
-        fh = logging.FileHandler(log_file, mode='w')
-        fh.setLevel(logging.INFO)
-        # Console handler
-        ch = logging.StreamHandler()
-        ch.setLevel(logging.INFO)
 
-        # Formato
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        fh.setFormatter(formatter)
-        ch.setFormatter(formatter)
+log_filename = f"logs/execution_{datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}.log"
 
-        # Añadir handlers
-        logger.addHandler(fh)
-        logger.addHandler(ch)
 
-    return logger
+logging.basicConfig(
+    filename=log_filename,
+    level=logging.INFO,
+    format="%(asctime)s | %(levelname)s | %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+
+
+logger = logging.getLogger()
