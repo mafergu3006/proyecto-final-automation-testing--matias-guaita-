@@ -2,20 +2,19 @@
 
 ## Descripción del Proyecto
 
-### Este proyecto es un framework de automatización de pruebas UI y API.
+### Este proyecto es un framework de automatización de pruebas UI y API usando Python. El framework combina pruebas UI con Selenium WebDriver, pruebas de API utilizando la biblioteca Requests, y estructura el código de manera eficiente usando el patrón Page Object Model (POM).
 
-#### Se han utilizado las siguientes tecnologías: 
-##### -Python
-##### -Pytest
-##### -Selenium WebDriver
-##### -Requests
-##### -Page Object Model (POM)
-##### -Reportes HTML / Allure
-##### -Git + GitHub
-##### -GitHub Actions
+### El framework permite ejecutar pruebas automatizadas de UI y API, incluyendo reportes visuales HTML y screenshots de fallos.
 
+## Tecnologías utilizadas
+#### - Python
+#### - Pytest
+#### - Selenium WebDriver
+#### - Requests
+#### - pytest_html
+#### - Git + GitHub
+#### - GitHub Actions
 
-### El objetivo de este proyecto es
 
 
 
@@ -23,7 +22,16 @@
 
 ## Instalación de dependencias desde pip (línea de comandos):
 
-#### Ejecutar: _pip install selenium pytest pytest-html pyyaml requests_
+### Ejecutar: _pip install selenium pytest pytest-html pyyaml requests_
+
+#### Si solicita actualización, se debe ejecutar:
+##### _pip install --upgrade pip_ 
+###### o intentar con:
+##### _python.exe -m pip install --upgrade pip_
+
+### Se creó un archivo _requeriments.txt_ como otra forma de instalación de las dependencias:
+
+#### _pip install -r requirements.txt_
 
 
 
@@ -31,10 +39,29 @@
 
 ### Usando Pytest: 
 
-#### Ejecutar: _pytest -v --html=reports/report.html_
+#### Ejecutar: _pytest tests/ --html=reports/report.html --self-contained-html_
+
+#### Si se desea ejecutar solo las pruebas UI:
+
+##### _pytest tests/ui/ --html=reports/report.html --self-contained-html_
+
+#### Si se desea ejecutar solo las pruebas API:
+
+##### _pytest tests/api/ --html=reports/report.html --self-contained-html_
 
 
 ### Se creó un archivo pytest.ini para otra forma de ejecutar las pruebas:
 
 #### Ejecutar: _pytest_
 
+
+## Interpretación de los Reportes
+
+### Los reportes HTML se generan en la carpeta reports/
+
+### Cada test incluye:
+#### - Estado: Pasado o Fallado
+#### - Duración de ejecución
+#### - Logs detallados de cada paso (pasos clave de UI o API)
+#### - Capturas de pantalla adjuntas automáticamente en tests fallidos
+#### - Los logs completos se encuentran en logs/, con fecha y hora de ejecución.
