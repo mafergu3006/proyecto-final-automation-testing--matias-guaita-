@@ -7,7 +7,7 @@
 ### El framework permite ejecutar pruebas automatizadas de UI y API, incluyendo reportes visuales HTML y screenshots de fallos.
 
 ## Tecnologías utilizadas
-#### - Python
+### - Python
 #### - Pytest
 #### - Selenium WebDriver
 #### - Requests
@@ -17,60 +17,60 @@
 
 ## Estructura del Proyecto
 
-### main/
-### │
-### ├── conftest.py 
-### │
-### ├── pytest.ini 
-### │
-### ├── requirements.txt 
-### │
-### ├── README.md
-### │
-### ├── pages
-### │ ├── base_page.py
-### │ ├── cart_page.py
-### │ ├── checkout_page.py
-### │ ├── inventory_page.py
-### │ └── login_page.py
-### │
-### ├── tests
-### │ ├── ui
-### │    ├── test_add_cart.py
-### │    ├── test_checkout.py
-### │    ├── test_login_negative.py
-### │    ├── test_login_ui.py
-### │    └── test_navigation.py
-### │
-### │ └── api
-### │    ├── test_create_user_api.py
-### │    ├── test_delete_user_api.py
-### │    └── test_users_api.py
-### │
-### ├── utils
-### │ ├── api_client.py
-### │ ├── data_reader.py
-### │ ├── driver_factory.py
-### │ └── logger.py
-### │
-### ├── .github
-### │ └── workflows
-### │    └── test.yml
-### │
-### ├── config
-### │ └── config.yaml
-### │
-### ├── data
-### │ └── checkout_data.json
-### │ └── invalid_users.json
-### │ └── users.csv
-### │
-### ├── screenshots
-### │
-### ├── reports
-### │ └── report.html
-### │
-### └── logs
+#### main
+#### │
+#### ├── conftest.py 
+#### │
+#### ├── pytest.ini 
+#### │
+#### ├── requirements.txt 
+#### │
+#### ├── README.md
+#### │
+#### ├── pages
+#### │ ├── base_page.py
+#### │ ├── cart_page.py
+#### │ ├── checkout_page.py
+#### │ ├── inventory_page.py
+#### │ └── login_page.py
+#### │
+#### ├── tests
+#### │ ├── ui
+#### │    ├── test_add_cart.py
+#### │    ├── test_checkout.py
+#### │    ├── test_login_negative.py
+#### │    ├── test_login_ui.py
+#### │    └── test_navigation.py
+#### │
+#### │ └── api
+#### │    ├── test_create_user_api.py
+#### │    ├── test_delete_user_api.py
+#### │    └── test_users_api.py
+#### │
+#### ├── utils
+#### │ ├── api_client.py
+#### │ ├── data_reader.py
+#### │ ├── driver_factory.py
+#### │ └── logger.py
+#### │
+#### ├── .github
+#### │ └── workflows
+#### │    └── test.yml
+#### │
+#### ├── config
+#### │ └── config.yaml
+#### │
+#### ├── data
+#### │ └── checkout_data.json
+#### │ └── invalid_users.json
+#### │ └── users.csv
+#### │
+#### ├── screenshots
+#### │
+#### ├── reports
+#### │ └── report.html
+#### │
+#### └── logs
 
 
 ## Instalación de dependencias desde pip (línea de comandos):
