@@ -1,0 +1,7 @@
+[
+    {
+        "username": "fake_user",
+        "password": "wrong_pass",
+        "error": "Username and password do not match"
+    }
+]
